@@ -19,3 +19,7 @@ p {
 td {
     border: solid 1px #000;
 }
+
+.navbar-toggler-icon {
+    background-image: none;
+}
