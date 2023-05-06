@@ -19,3 +19,9 @@ p {
 .navbar-toggler-icon {
     background-image: none;
 }
+
+@media screen and (max-width: 600px){
+    .card-img-overlay {
+        width: 100% !important;
+    }
+}
