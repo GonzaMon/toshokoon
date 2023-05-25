@@ -24,7 +24,7 @@
         <!--Menu-->
         <nav class="navbar navbar-expand-lg bg-secondary d-flex border-bottom border-info">
             <!--Branding-->
-            <a href="index.html" class="text-decoration-none d-none d-lg-block"><img
+            <a href="../index.html" class="text-decoration-none d-none d-lg-block"><img
                     src="../assets/img/logo-toshokoon-f.svg" alt="logo-toshokoon-f" width="250" height="50"></a>
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -37,32 +37,29 @@
                     <div>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page" href="#Qtoshokoon">Qué es
-                                    Toshokoon?</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #Qtoshokoon">Qué es Toshokoon?</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page" href="#novedades">Novedades</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #novedades">Novedades</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page" href="#toshoteca">Toshoteca</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #toshoteca">Toshoteca</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page"
-                                    href="#estadisticas">Estadísticas</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #estadisticas">Estadísticas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page" href="#gente">La Gente</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #gente">La Gente</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page"
-                                    href="#registrate">Regístrate</a>
+                                <a class="nav-link active text-info" aria-current="page" href="../index.html #registrate">Regístrate</a>
                             </li>
                         </ul>
                     </div>
                     <div class="ms-auto">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-info" aria-current="page" href="pages/mejora.html">Mejora</a>
+                                <a class="nav-link active text-info" aria-current="page" href="mejora.html">Mejora</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" aria-current="page">Iniciar Sesión</a>
@@ -114,16 +111,16 @@
         </div>
     </div>
 
-    <!--Formulario para registrarse-->
+    <!--Formulario para mejorar el plan-->
     <div class="formulario p-2 text-info bg-dark py-5" id="registrate">
-        <form class="container needs-validation">
+        <form class="container">
             <h6 class="text-center text-secondary fw-light">¡Mejorá tu plan!</h6>
             <h2 class="text-info text-center mb-4">Valor Mensual: $2000</h2>
 
             <div class="row g-3 d-flex justify-content-center mb-3">
                 <div class="col-6 col-sm-4 d-flex flex-wrap">
-                    <label for="exampleInputNombre1" class="form-label">Nombre</label>
-                    <input type="text" class="form-control align-self-end" id="exampleInputNombre1"
+                    <label for="InputNombre1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control align-self-end" id="InputNombre1"
                         aria-describedby="NombreHelp" placeholder="Tu nombre real" required>
                 </div>
                 <div class="col-6 col-sm-4">
@@ -133,7 +130,7 @@
                 </div>
             </div>
             <div class="row g-3 d-flex justify-content-center  mb-3">
-                <div class="col-8">
+                <div class="col-12 col-sm-8">
                     <label for="exampleInputEmail1" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="pepe@live.com" required>
@@ -142,13 +139,14 @@
             <div class="row g-3 d-flex justify-content-center mb-3">
                 <div class="col-6 col-sm-4">
                     <label for="exampleInputCantidadMeses1" class="form-label">Cantidad de Meses</label>
-                    <input type="text" id="cantMeses" class="form-control" id="exampleInputCantidadMeses1" aria-describedby="MesesHelp"
+                    <input type="number" id="cantMeses" class="form-control" id="exampleInputCantidadMeses1" aria-describedby="MesesHelp"
                         placeholder="Cantidad de meses" required>
                 </div>
                 <div class="col-6 col-sm-4">
                     <label for="exampleInputPlanes" class="form-label">Plan</label>
-                    <select class="form-select" id="planes" >
-                        <option selected>FIERRO</option>
+                    <select class="form-select" id="planes" required>
+                        <option selected disabled value="">Seleccione un Plan</option>
+                        <option value="0">FIERRO</option>
                         <option value="1">COBRE</option>
                         <option value="2">PLATA</option>
                         <option value="3">ORO</option>
@@ -156,7 +154,7 @@
                 </div>
             </div>
             <div class="row g-3 d-flex justify-content-center mb-3">
-                <div class="col-8 rounded-1 pt-3">
+                <div class="col-12 col-sm-8 rounded-1 pt-3">
                     <div class="input-group mb-3">
                         <input type="text" id="total" readonly class="form-control-plaintext bg-secondary rounded-1 text-info p-3" value="Total a pagar: $">
                     </div>
@@ -164,10 +162,10 @@
             </div>
             <div class="row g-3 d-flex justify-content-center mb-3">
                 <div class="col-6 col-sm-4 d-flex flex-wrap">
-                    <button type="reset" class="btn btn-success text-info w-100" onclick="Restaurar()">Borrar</button>
+                    <button type="reset" class="btn btn-success text-info w-100" onclick="DeshabilitarResumen(false)">Borrar</button>
                 </div>
                 <div class="col-6 col-sm-4">
-                    <button type="button" id="resumen" class="btn btn-success text-info w-100" onclick="MontoAPagar()">Resumen</button>
+                    <button type="submit" id="resumen" class="btn btn-success text-info w-100" onclick="MontoAPagar()">Resumen</button>
                 </div>
             </div>
         </form>
@@ -205,7 +203,7 @@
         </div>
     </footer>
 
-    <!-- libreria de javascript-->
+    <!-- librerias de javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
