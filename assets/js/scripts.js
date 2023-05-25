@@ -18,28 +18,29 @@ const btn_resumen = document.getElementById("resumen");
 
 function MontoAPagar(){
     let cant_meses = Number(document.getElementById("cantMeses").value);
-    let planes = document.getElementById("planes");
-    let plan = planes.options[planes.selectedIndex].innerText;
-    let totalAPagar = 0;
+    //let planes = document.getElementById("planes"); Obtenemos el objeto select
+    //let plan = planes.options[planes.selectedIndex].innerText; de esta forma obtenemos lo q se visualiza en el select
+    let plan = document.getElementById("planes").value;
+    let total_a_pagar = 0;
 
-    if (plan === "Fierro") {
-        totalAPagar = cant_meses * (valor_mensual - valor_mensual * 1);
-    } else if (plan === "COBRE") {
-        totalAPagar = cant_meses * (valor_mensual - valor_mensual * 0.8);
-    } else if (plan === "PLATA") {
-        totalAPagar = cant_meses * (valor_mensual - valor_mensual * 0.5);
-    } else if (plan === "ORO") {
-        totalAPagar = cant_meses * (valor_mensual - valor_mensual * 0.15);
+    if (plan === "0") {
+        total_a_pagar = cant_meses * (valor_mensual - valor_mensual * 1);
+    } else if (plan === "1") {
+        total_a_pagar = cant_meses * (valor_mensual - valor_mensual * 0.8);
+    } else if (plan === "2") {
+        total_a_pagar = cant_meses * (valor_mensual - valor_mensual * 0.5);
+    } else if (plan === "3") {
+        total_a_pagar = cant_meses * (valor_mensual - valor_mensual * 0.15);
     }
-    document.getElementById("total").value += totalAPagar;
-    btn_resumen.disabled = true;
+    document.getElementById("total").value += total_a_pagar;
+    DeshabilitarResumen(true);
 };
 
-function Restaurar(){
-    btn_resumen.disabled = false;
+function DeshabilitarResumen( deshabilitar ){
+    btn_resumen.disabled = deshabilitar;
 };
-
+/*
 //Validar que se llenen los campos del formulario
 function ValidarCampos(){
 
-};
+};*/
